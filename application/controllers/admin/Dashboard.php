@@ -1,0 +1,12 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Dashboard extends CI_Controller{
+    function index(){
+        updata();
+        $this->load->view('template/template', [
+            'content' => $this->load->view('admin/dashboard', '', true)
+        ]);
+    }
+
+    
+}
